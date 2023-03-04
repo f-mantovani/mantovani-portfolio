@@ -1,0 +1,38 @@
+.project-card {
+  background-color: #333e;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  color: rgb(252, 233, 233);
+  border-radius: .125rem;
+  padding: .75rem 1rem;
+  gap: .5rem;
+  border: 1px solid rgba(67, 67, 67, 0.933);
+  box-shadow: 4px 4px 8px rgba(67, 67, 67, 0.933);
+  margin: 1rem 0;
+
+  ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+  }
+
+  .project-card-tech{
+    align-self: flex-start;
+  }
+}
+
+.active {
+  .project-card{
+    box-shadow: 4px 4px 8px yellow;
+  }
+}
+
+  
+a {
+  text-decoration: none;
+}

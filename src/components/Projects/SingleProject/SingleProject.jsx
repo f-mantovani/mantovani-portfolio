@@ -1,10 +1,15 @@
+import { useParams } from 'react-router-dom'
 import './SingleProject.scss'
 
-import React from 'react'
 
-const SingleProject = () => {
+const SingleProject = ({ projects }) => {
+  const { id } = useParams()
+  const project = projects.find(project => project._id === id)
+
   return (
-    <div>SingleProject</div>
+    <div>
+      <h3>{project.title}</h3>
+    </div>
   )
 }
 

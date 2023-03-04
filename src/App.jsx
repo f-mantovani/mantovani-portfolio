@@ -25,16 +25,23 @@ function App() {
 	return (
 		<div className='App'>
 			<Navbar />
-			<Routes>
-				<Route path='/' element={<Home />} />
-				<Route path='/projects' element={<Projects projects={data} />} />
-				<Route path='/projects/:id' element={<SingleProject />} />
-				<Route path='about' element={<About />} />
-				<Route path='/contact' element={<Contact />} />
-				<Route path='/admin' element={<AdminLogin />} />
-				<Route path='*' element={<Home />} />
-			</Routes>
-			<div></div>
+			<div className='app-body'>
+				<Routes>
+					<Route path='/' element={<Home />} />
+
+					<Route path='/projects' element={<Projects projects={data} />}>
+						<Route path='/projects/:id' element={<SingleProject projects={data} />} />
+					</Route>
+
+					<Route path='about' element={<About />} />
+
+					<Route path='/contact' element={<Contact />} />
+
+					<Route path='/admin' element={<AdminLogin />} />
+
+					<Route path='*' element={<Home />} />
+				</Routes>
+			</div>
 		</div>
 	)
 }

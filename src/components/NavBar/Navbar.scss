@@ -2,22 +2,23 @@
   width: 100%;
   display: flex;
   justify-content: space-around;
-  padding: 1rem 1rem;
+  padding: 1rem 0;
   border-bottom: 1px solid #fff;
+  font-size: var(--fs-medium);
 
   .navbar-links {
     display: flex;
     gap: 1rem;
     
     a {
-      color: #fff;
+      color: var(--font-clr);
       text-decoration: none;
       padding-bottom: .5rem;
     }
     .active {
-      color: rgb(238, 238, 6);
-      text-shadow: 1px 1px 2px yellow;
-      border-bottom: 1px solid yellow;
+      color: var(--acc-clr);
+      text-shadow: 1px 1px 2px var(--acc-clr);
+      border-bottom: 1px solid var(--acc-clr);
     }
   }
 }

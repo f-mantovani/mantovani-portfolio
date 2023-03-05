@@ -10,6 +10,8 @@ import { Route, Routes } from 'react-router-dom'
 import About from './components/About/About'
 import AdminLogin from './components/Admin/AdminLogin'
 
+const highlightProjects = (projectsArray) => projectsArray.filter(project => project.isHighlight)
+
 function App() {
 	const queryClient = useQueryClient()
 
@@ -17,17 +19,21 @@ function App() {
 		queryKey: ['projects'],
 		queryFn: Project.getProjects,
 	})
-
+	
+	
 	if (isLoading) return 'Loading...'
 
+	
 	if (error) return 'some error just to check...'
-
+	
+	const highlight = highlightProjects(data)
+	
 	return (
 		<div className='App'>
 			<Navbar />
 			<div className='app-body'>
 				<Routes>
-					<Route path='/' element={<Home />} />
+					<Route path='/' element={<Home projects={highlight} />} />
 
 					<Route path='/projects' element={<Projects projects={data} />}>
 						<Route path='/projects/:id' element={<SingleProject projects={data} />} />

@@ -15,6 +15,12 @@
     }
   }
 
+  .skills {
+    display: flex;
+    gap: 2rem;
+    align-self: flex-start;
+  }
+
   .about-hard-skills,.about-soft-skills {
     align-self: flex-start;
     display: flex;

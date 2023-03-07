@@ -26,27 +26,29 @@ const About = () => {
 				</p>
 				<p>Please feel free to get in touch with me: felipe.mantovani@outlook.com</p>
 			</div>
-			<div className='about-hard-skills'>
-				<p>Technologies:</p>
-				<ul>
-					<li>HTML5, CSS & Responsive Web Design</li>
-					<li>Frontend Development: ReactJS, Styled-Components, SASS</li>
-					<li>Backend Development: Node.js & ExpressJS</li>
-					<li>Integration of 3rd party services (REST APIs)</li>
-					<li>Non-Relational database, MongoDB</li>
-					<li>Hosting, Agile Methodologies, Git and GitHub</li>
-					<li>Software testing with Jest</li>
-				</ul>
-			</div>
-			<div className='about-soft-skills'>
-				<p>Soft Skills:</p>
-				<ul>
-					<li>Teamwork</li>
-					<li>Communication</li>
-					<li>Problem Solving</li>
-					<li>Feedback oriented</li>
-					<li>Teaching</li>
-				</ul>
+			<div className='skills'>
+				<div className='about-hard-skills'>
+					<p>Technologies:</p>
+					<ul>
+						<li>HTML5, CSS & Responsive Web Design</li>
+						<li>Frontend Development: ReactJS, Styled-Components, SASS</li>
+						<li>Backend Development: Node.js & ExpressJS</li>
+						<li>Integration of 3rd party services (REST APIs)</li>
+						<li>Non-Relational database, MongoDB</li>
+						<li>Hosting, Agile Methodologies, Git and GitHub</li>
+						<li>Software testing with Jest</li>
+					</ul>
+				</div>
+				<div className='about-soft-skills'>
+					<p>Soft Skills:</p>
+					<ul>
+						<li>Teamwork</li>
+						<li>Communication</li>
+						<li>Problem Solving</li>
+						<li>Feedback oriented</li>
+						<li>Teaching</li>
+					</ul>
+				</div>
 			</div>
 		</div>
 	)

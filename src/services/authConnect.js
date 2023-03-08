@@ -8,7 +8,7 @@ class UserService {
   }
 
   verify(data) {
-    return apiConnect.get("/verify");
+    return apiConnect.get("/verify", data);
   }
 }
 

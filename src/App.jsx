@@ -20,9 +20,7 @@ function App() {
 		queryFn: Project.getProjects,
 	})
 	
-	
 	if (isLoading) return 'Loading...'
-
 	
 	if (error) return 'some error just to check...'
 	

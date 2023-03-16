@@ -2,7 +2,7 @@ import { createContext, useReducer, useContext } from 'react'
 import { LOGIN_ACTIONS, initialLoginState, reducer } from './loginReducer'
 import User from '../services/authConnect'
 
-const AuthContext = createContext(null)
+const AuthContext = createContext()
 
 const AuthProviderWrapper = ({ children }) => {
 	const [{ user, isLoading, isLoggedIn }, dispatch] = useReducer(reducer, initialLoginState)
@@ -15,7 +15,9 @@ const AuthProviderWrapper = ({ children }) => {
 			dispatch({ type: LOGIN_ACTIONS.REMOVE })
 		}
 
+		
 		try {
+			dispatch({ type: LOGIN_ACTIONS.ATTEMPT })
 			const user = await User.verify()
 			dispatch({ type: LOGIN_ACTIONS.LOGIN_SUCESS, payload: user })
 		} catch (error) {

@@ -1,7 +1,8 @@
 export const LOGIN_ACTIONS = {
 	LOGIN_FAIL: 'login-fail',
 	LOGIN_SUCESS: 'login-sucess',
-	REMOVE: 'remove'
+	REMOVE: 'remove',
+	ATTEMPT: 'attempt'
 }
 
 export const initialLoginState = {
@@ -14,6 +15,13 @@ function reducer(state, action){
 	const { type, payload } = action
 
 	switch (type) {
+		case LOGIN_ACTIONS.ATTEMPT:
+			return {
+				...state,
+				user: null,
+				isLoading: true,
+				isLoggedIn: false
+			}
 		case LOGIN_ACTIONS.LOGIN_SUCESS:
 			return {
 				...state,

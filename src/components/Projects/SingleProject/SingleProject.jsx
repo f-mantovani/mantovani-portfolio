@@ -6,8 +6,6 @@ const SingleProject = ({ projects }) => {
   const { id } = useParams()
   const project = projects.find(project => project._id === id)
 
-  console.log(project)
-
   return (
     <div className='project-single'>
       <h3>{project.title}</h3>

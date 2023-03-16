@@ -1,22 +1,40 @@
 .projects {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  gap: 4rem;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	gap: 4rem;
 
-  > * {
-    width: 50%;
-  }
-  
-  .projects-all{
+	> * {
+		width: 50%;
+	}
+
+	.projects-all {
     overflow: scroll;
-    height: 100%;
-  }
-  
-  .projects-all::-webkit-scrollbar{
-    display: none;
-  }
+		height: 100%;
+    margin: 1rem;
+	}
 
+	.projects-all::-webkit-scrollbar {
+		display: none;
+	}
+
+	@media (max-width: 767px) {
+		flex-direction: column;
+    gap: 2rem;
+
+		> * {
+			width: auto;
+      min-height: 250px;
+    }
+
+		.projects-all {
+			display: flex;
+      align-items: flex-start;
+      height: auto;
+			width: 100%;
+      gap:1rem;
+		}
+	}
 }

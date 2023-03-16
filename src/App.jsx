@@ -9,11 +9,12 @@ import Navbar from './components/NavBar/Navbar'
 import { Route, Routes } from 'react-router-dom'
 import About from './components/About/About'
 import AdminLogin from './components/Admin/AdminLogin'
+import IsPrivate from './components/IsPrivate'
+import Dashboard from './components/Dashboard/Dashboard'
 
 const highlightProjects = (projectsArray) => projectsArray.filter(project => project.isHighlight)
 
 function App() {
-	const queryClient = useQueryClient()
 
 	const { data, isLoading, error } = useQuery({
 		queryKey: ['projects'],
@@ -43,7 +44,9 @@ function App() {
 
 					<Route path='/admin' element={<AdminLogin />} />
 
-					<Route path='*' element={<Home />} />
+					<Route path='/dashboard' element={<IsPrivate><Dashboard projects={data} /></IsPrivate>} />
+
+					<Route path='*' element={<Home projects={highlight} />} />
 				</Routes>
 			</div>
 		</div>

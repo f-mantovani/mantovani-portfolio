@@ -1,0 +1,12 @@
+.project-single {
+  height: 100%;
+	overflow: scroll;
+
+  @media (max-width: 768px) {
+    height: auto;
+  }
+}
+
+.project-single::-webkit-scrollbar {
+	display: none;
+}

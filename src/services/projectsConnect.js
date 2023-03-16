@@ -5,6 +5,16 @@ class ProjectService {
   getProjects() {
     return apiConnect.get("/");
   }
+
+  updateProject(info) {
+    const { id, data } = info
+    return apiConnect.put(`/${id}`, data)
+  }
+
+  createProject(info){
+    console.log(info)
+    return apiConnect.post('/', info)
+  }
 }
 
 export default new ProjectService();

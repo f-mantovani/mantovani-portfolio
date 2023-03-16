@@ -26,7 +26,7 @@ const AdminLogin = () => {
             authenticateUser()
             setSubmitting(false)
 						resetForm()
-            navigate('/dashboard')
+            navigate('/private/dashboard')
 					} catch (error) {
 						console.log(error)
 					}

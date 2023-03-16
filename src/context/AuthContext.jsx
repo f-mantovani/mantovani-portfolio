@@ -15,7 +15,6 @@ const AuthProviderWrapper = ({ children }) => {
 			dispatch({ type: LOGIN_ACTIONS.REMOVE })
 		}
 
-		
 		try {
 			dispatch({ type: LOGIN_ACTIONS.ATTEMPT })
 			const user = await User.verify()

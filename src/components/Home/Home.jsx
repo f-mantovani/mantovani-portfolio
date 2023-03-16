@@ -1,4 +1,3 @@
-import { useAuthValue } from '../../context/AuthContext'
 import ProjectCard from '../Projects/ProjectCard'
 import './Home.scss'
 

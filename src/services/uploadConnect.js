@@ -1,11 +1,13 @@
-import Connection from "../lib/axiosAbstraction";
+import Connection from '../lib/axiosAbstraction'
 
-const apiConnect = new Connection(`${import.meta.env.VITE_DB_URL}/upload`);
+const apiConnect = new Connection(`${import.meta.env.VITE_DB_URL}/upload`)
 
 class ProjectService {
-  getProjects() {
-    return apiConnect.get("/");
-  }
+	sendImage(file) {
+		const imgData = new FormData()
+		imgData.append('image', file)
+		return apiConnect.post('/', imgData)
+	}
 }
 
-export default new ProjectService();
+export default new ProjectService()

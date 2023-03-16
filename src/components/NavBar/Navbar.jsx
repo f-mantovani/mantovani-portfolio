@@ -9,7 +9,7 @@ const Navbar = () => {
 		<nav className='navbar'>
 			<div className='navbar-logo'>
 				<NavLink to={'/'}>
-					<img src='' alt='logo' />
+					Felipe Mantovani
 				</NavLink>
 			</div>
 			<div className='navbar-links'>
@@ -20,7 +20,7 @@ const Navbar = () => {
 				<NavLink to={'/about'}>About Me</NavLink>
 				<NavLink to={'/contact'}>Contact</NavLink>
 				<NavLink to={'/admin '}>Admin</NavLink>
-				<NavLink to={'/dashboard'}>Dash</NavLink>
+				<NavLink to={'/private/dashboard'}>Dash</NavLink>
 			</div>
 		</nav>
 	)

@@ -11,6 +11,7 @@ import About from './components/About/About'
 import AdminLogin from './components/Admin/AdminLogin'
 import IsPrivate from './components/IsPrivate'
 import Dashboard from './components/Dashboard/Dashboard'
+import EditProject from './components/Projects/EditProject/EditProject'
 
 const highlightProjects = (projectsArray) => projectsArray.filter(project => project.isHighlight)
 
@@ -44,7 +45,11 @@ function App() {
 
 					<Route path='/admin' element={<AdminLogin />} />
 
-					<Route path='/dashboard' element={<IsPrivate><Dashboard projects={data} /></IsPrivate>} />
+					<Route path='/private' element={<IsPrivate />}>
+						<Route path='dashboard' element={<Dashboard projects={data} />} />
+						<Route path=':projectId' element={<EditProject projects={data} />} />
+						<Route path='add' element={<EditProject />} />
+					</Route>
 
 					<Route path='*' element={<Home projects={highlight} />} />
 				</Routes>

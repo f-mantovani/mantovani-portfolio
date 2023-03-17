@@ -1,4 +1,4 @@
-import { useLocation, useParams } from 'react-router-dom'
+import { useLocation, useNavigate, useParams } from 'react-router-dom'
 import { Formik, Field, Form } from 'formik'
 import { useMutation, useQueryClient } from '@tanstack/react-query'
 
@@ -7,17 +7,20 @@ import projectsConnect from '../../../services/projectsConnect'
 
 const EditProject = ({ projects }) => {
 	const { projectId } = useParams()
-  const { pathname } = useLocation()
-  const add = pathname === '/private/add'
-  const projectDummy = {
-    title: '',
-    frontendLink: '',
-    backendLink: '',
-    imageUrl: '',
-    description: '',
-    isHighlight: false,
-  }
-	const project = projects ? projects.find(p => p._id === projectId) : {...projectDummy}
+
+	const { pathname } = useLocation()
+	const add = pathname === '/private/add'
+
+	const projectDummy = {
+		title: '',
+		frontendLink: '',
+		backendLink: '',
+		imageUrl: '',
+		description: '',
+		isHighlight: false,
+	}
+
+	const project = projects ? projects.find(p => p._id === projectId) : { ...projectDummy }
 
 	const queryClient = useQueryClient()
 
@@ -27,6 +30,8 @@ const EditProject = ({ projects }) => {
 			queryClient.invalidateQueries({ queryKey: ['projects'] })
 		},
 	})
+
+	const navigate = useNavigate()
 
 	return (
 		<>
@@ -45,6 +50,8 @@ const EditProject = ({ projects }) => {
 						const projectInfo = { ...project, ...imageUrl }
 
 						add ? mutate(projectInfo) : mutate({ id: projectId, data: projectInfo })
+						
+						navigate('/private/dashboard')
 					} catch (error) {
 						console.log(error)
 					} finally {
@@ -100,7 +107,7 @@ const EditProject = ({ projects }) => {
 							/>
 						</div>
 						<div>
-							<img src={project.imageUrl} alt={project.title} />
+							<img src={project.imageUrl} alt={project.title} width={30} />
 							<label htmlFor='imageUrl'>imageUrl</label>
 							<input
 								name='project.image'

@@ -12,7 +12,6 @@ class ProjectService {
   }
 
   createProject(info){
-    console.log(info)
     return apiConnect.post('/', info)
   }
 }

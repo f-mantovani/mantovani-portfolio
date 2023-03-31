@@ -3,6 +3,8 @@
 	border-radius: 0.5rem;
 	width: 300px;
 	min-height: 20rem;
+	display: flex;
+	flex-direction: column;
 
 	h3 {
 		color: var(--bg-clr);
@@ -30,8 +32,13 @@
 		font-size: var(--fs-small);
 	}
 
-	img {
-		object-fit: fill;
+	img { 
+		margin: 0 auto;
+		width: 300px;
+		max-height: 180px;
+		object-fit: cover;
+		border-top-right-radius: .5rem;
+		border-top-left-radius: .5rem;
 	}
 
 	.project-card-info {
@@ -40,6 +47,7 @@
 		justify-content: center;
 		width: 80%;
 		margin: 0 auto;
+		
 	}
 
 	.project-card-tech ul {

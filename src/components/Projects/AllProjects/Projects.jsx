@@ -6,7 +6,7 @@ const Projects = ({ projects }) => {
 	return (
 		<div className='projects'>
 			<div className='projects-all'>
-				{projects.map(project => (
+				{projects?.map(project => (
 					<ProjectCard key={project._id} {...project} />
 				))}
 			</div>

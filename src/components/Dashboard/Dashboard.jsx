@@ -5,7 +5,7 @@ const Dashboard = ({ projects }) => {
 		<>
 			<NavLink to={`/private/add`}> Add a project </NavLink>
 
-			{projects.map(p => (
+			{projects?.map(p => (
 				<NavLink to={`/private/${p._id}`} key={p._id}> {p.title} </NavLink>
 			))}
 		</>

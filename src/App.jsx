@@ -1,4 +1,4 @@
-import { useQuery, useQueryClient } from '@tanstack/react-query'
+import { useQuery } from '@tanstack/react-query'
 import './App.scss'
 import Project from './services/projectsConnect'
 import Projects from './components/Projects/AllProjects/Projects'
@@ -12,8 +12,9 @@ import AdminLogin from './components/Admin/AdminLogin'
 import IsPrivate from './components/IsPrivate'
 import Dashboard from './components/Dashboard/Dashboard'
 import EditProject from './components/Projects/EditProject/EditProject'
+import paths from './utils/path.js'
 
-const highlightProjects = (projectsArray) => projectsArray.filter(project => project.isHighlight)
+const highlightProjects = (projectsArray) => projectsArray?.filter(project => project.isHighlight)
 
 function App() {
 
@@ -21,11 +22,7 @@ function App() {
 		queryKey: ['projects'],
 		queryFn: Project.getProjects,
 	})
-	
-	if (isLoading) return 'Loading...'
-	
-	if (error) return 'some error just to check...'
-	
+
 	const highlight = highlightProjects(data)
 	
 	return (
@@ -33,17 +30,17 @@ function App() {
 			<Navbar />
 			<div className='app-body'>
 				<Routes>
-					<Route path='/' element={<Home projects={highlight} />} />
+					<Route path={paths.home} element={<Home projects={highlight} />} />
 
-					<Route path='/projects' element={<Projects projects={data} />}>
-						<Route path='/projects/:id' element={<SingleProject projects={data} />} />
+					<Route path={paths.projects} element={<Projects projects={data} />}>
+						<Route path={paths.projectId} element={<SingleProject projects={data} />} />
 					</Route>
 
-					<Route path='about' element={<About />} />
+					<Route path={paths.about} element={<About />} />
 
-					<Route path='/contact' element={<Contact />} />
+					<Route path={paths.contact} element={<Contact />} />
 
-					<Route path='/admin' element={<AdminLogin />} />
+					<Route path={paths.admin} element={<AdminLogin />} />
 
 					<Route path='/private' element={<IsPrivate />}>
 						<Route path='dashboard' element={<Dashboard projects={data} />} />

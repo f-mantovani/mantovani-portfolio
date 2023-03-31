@@ -1,25 +1,59 @@
-.navbar{
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  padding: 1rem 0;
-  border-bottom: 1px solid #fff;
-  font-size: var(--fs-medium);
+.navbar {
+	position: sticky;
+	inset: 0 0 0 0;
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding: 1rem 0;
+	font-size: var(--fs-medium);
+	background-color: var(--bg-clr);
 
-  .navbar-links {
-    display: flex;
-    gap: 1rem;
-    
-    a {
-      color: var(--font-clr);
-      text-decoration: none;
-      padding-bottom: .5rem;
-    }
-    
-    .active {
-      color: var(--acc-clr);
-      text-shadow: 1px 1px 2px var(--acc-clr);
-      border-bottom: 1px solid var(--acc-clr);
-    }
-  }
+	.navbar-logo {
+		a {
+			color: var(--acc-clr);
+			text-decoration: none;
+			padding-bottom: 0.5rem;
+		}
+	}
+
+	.navbar-links {
+		display: flex;
+
+		a {
+			color: var(--font-clr);
+			text-decoration: none;
+			padding: 0.5rem 1rem;
+		}
+
+		.active {
+			color: var(--acc-clr);
+			outline: 2px solid var(--acc-clr);
+			border-radius: 28px;
+		}
+	}
+}
+
+.background {
+	background-color: var(--bg-clr);
+	border-radius: 50%;
+	width: 120%;
+	height: 400px;
+	position: absolute;
+	top: -135px;
+	z-index: -1;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+}
+
+.main-title {
+	text-align: center;
+	margin-bottom: 4rem;
+	color: var(--acc-clr);
+	font-family: 'Play';
+	font-style: normal;
+	font-weight: 700;
+	font-size: var(--fs-xlarge);
+	line-height: 65px;
 }

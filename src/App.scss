@@ -1,15 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Play:wght@400;700&display=swap');
 
 :root {
-	--acc-clr: #ffff00;
-	--font-clr: #fff;
-	--bg-clr: #171616;
+	--acc-clr: #88c8f3;
+	--light-clr: #ffffff;
+	--bg-clr: #011014;
+	--bg-light: #daf1f6;
 	--bg-shadow: rgba(67, 67, 67, 0.933);
-	--fs-small: 0.625rem;
-	--fs-medium: 1.25rem;
-	--fs-large: 1.75rem;
-	--fs-xlarge: 2rem;
-	--fs-xxl: 3rem;
+	--fs-small: 0.8125rem;
+	--fs-medium: 1rem;
+	--fs-large: 1.5rem;
+	--fs-xlarge: 3.5rem;
+	--fw-bold: 900;
 }
 
 *,
@@ -17,12 +18,16 @@
 *::after {
 	margin: 0;
 	padding: 0;
-  font-family: 'Lato', sans-serif;
+	font-family: 'Lato', sans-serif;
 	line-height: 1.4;
 }
 
+img {
+	max-width: 100%;
+}
+
 html {
-	background-color: #171616;
+	background-color: var(--bg-light);
 	color: rgb(239, 234, 234);
 }
 
@@ -39,7 +44,7 @@ html {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	margin-top: 1rem;
+	margin-top: 8rem;
 	height: 85vh;
 
 	@media (max-width: 767px) {

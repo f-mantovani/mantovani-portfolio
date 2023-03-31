@@ -20,34 +20,35 @@
 	padding: 0;
 	font-family: 'Lato', sans-serif;
 	line-height: 1.4;
+	box-sizing: border-box;
 }
 
 img {
 	max-width: 100%;
 }
 
-html {
-	background-color: var(--bg-light);
-	color: rgb(239, 234, 234);
-}
 
 .App {
+	background-color: var(--bg-light);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: center;
+	justify-content: space-between;
+	height: 100vh;
+}
+
+html::-webkit-scrollbar {
+	display: none;
 }
 
 .app-body {
-	width: 80%;
 	display: flex;
 	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	margin-top: 8rem;
-	height: 85vh;
+	gap: 4rem;
+	overflow:scroll;
+	height:20%;
 
 	@media (max-width: 767px) {
 		width: 90vw;
 	}
-}
+ }

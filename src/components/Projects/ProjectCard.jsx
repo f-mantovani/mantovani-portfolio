@@ -14,6 +14,8 @@ const titleCapitalized = title => {
 		.join(' ')
 }
 
+const sliceTech = techArray => techArray.slice(0, 4)
+
 const ProjectCard = ({ imageUrl, techStack, title, _id }) => {
 	return (
 		<NavLink to={`/projects/${_id}`} className={checkActive}>
@@ -24,7 +26,7 @@ const ProjectCard = ({ imageUrl, techStack, title, _id }) => {
 					<p>Tech Stack:</p>
 					<div className='project-card-tech'>
 						<ul>
-							{techStack?.map(tech => (
+							{sliceTech(techStack)?.map(tech => (
 								<li key={tech}>{tech}</li>
 							))}
 						</ul>

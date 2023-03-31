@@ -1,11 +1,9 @@
-import { NavLink, useLocation } from 'react-router-dom'
+import { NavLink, Link, useLocation } from 'react-router-dom'
 import Typewriter from 'typewriter-effect'
 
 import './Navbar.scss'
 
 import paths from '../../utils/path.js'
-
-const checkActive = ({ isActive }) => (isActive ? 'active' : null)
 
 const strings = [
 	'Web Developer',
@@ -48,26 +46,20 @@ const Navbar = () => {
 	const { pathname } = useLocation()
 
 	return (
-		<>
+		<header>
 			<nav className='navbar'>
-				<div className='navbar-logo'>
-					<NavLink to={paths.home}>Felipe Mantovani</NavLink>
-				</div>
-				<div className='navbar-links'>
-					<NavLink to={paths.home} className={checkActive}>
-						Home
-					</NavLink>
+				<Link to={paths.home} className='logo'>Felipe Mantovani</Link>
+				<section className='navbar-links'>
+					<NavLink to={paths.home}>Home</NavLink>
 					<NavLink to={paths.projects}>Projects</NavLink>
 					<NavLink to={paths.about}>About Me</NavLink>
 					<NavLink to={paths.contact}>Contact</NavLink>
 					<NavLink to={'/admin '}>Admin</NavLink>
 					<NavLink to={'/private/dashboard'}>Dash</NavLink>
-				</div>
+				</section>
 			</nav>
-			<div className='background'>
-				<h1 className='main-title'> {title(pathname)}</h1>
-			</div>
-		</>
+			<h1 className='main-title'> {title(pathname)}</h1>
+		</header>
 	)
 }
 

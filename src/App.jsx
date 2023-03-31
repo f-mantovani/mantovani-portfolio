@@ -13,18 +13,18 @@ import IsPrivate from './components/IsPrivate'
 import Dashboard from './components/Dashboard/Dashboard'
 import EditProject from './components/Projects/EditProject/EditProject'
 import paths from './utils/path.js'
+import Footer from './components/Footer/Footer'
 
-const highlightProjects = (projectsArray) => projectsArray?.filter(project => project.isHighlight)
+const highlightProjects = projectsArray => projectsArray?.filter(project => project.isHighlight)
 
 function App() {
-
 	const { data, isLoading, error } = useQuery({
 		queryKey: ['projects'],
 		queryFn: Project.getProjects,
 	})
 
 	const highlight = highlightProjects(data)
-	
+
 	return (
 		<div className='App'>
 			<Navbar />
@@ -51,6 +51,7 @@ function App() {
 					<Route path='*' element={<Home projects={highlight} />} />
 				</Routes>
 			</div>
+			<Footer />
 		</div>
 	)
 }

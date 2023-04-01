@@ -7,7 +7,7 @@ const Projects = ({ projects }) => {
 		<div className='projects'>
 			<div className='projects-all'>
 				{projects?.map(project => (
-					<ProjectCard key={project._id} {...project} />
+					<ProjectCard key={project._id} {...project} className='project-page' />
 				))}
 			</div>
 			<Outlet />

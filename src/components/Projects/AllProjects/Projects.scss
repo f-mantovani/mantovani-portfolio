@@ -5,34 +5,16 @@
 	align-items: center;
 	gap: 4rem;
 
-	> * {
-		width: 50%;
-	}
-
 	.projects-all {
-    overflow: scroll;
-    margin: 1rem;
+		display: flex;
+		flex-direction: column;
+		margin-top: 4rem;
+		margin-bottom: 14rem;
+		gap: 3rem
 	}
 
 	.projects-all::-webkit-scrollbar {
 		display: none;
 	}
 
-	@media (max-width: 767px) {
-		flex-direction: column;
-    gap: 2rem;
-
-		> * {
-			width: auto;
-      min-height: 250px;
-    }
-
-		.projects-all {
-			display: flex;
-      align-items: flex-start;
-      height: auto;
-			width: 100%;
-      gap:1rem;
-		}
-	}
 }

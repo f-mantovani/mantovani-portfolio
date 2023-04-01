@@ -27,6 +27,9 @@ img {
 	max-width: 100%;
 }
 
+html::-webkit-scrollbar {
+	display: none;
+}
 
 .App {
 	background-color: var(--bg-light);
@@ -34,21 +37,5 @@ img {
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-between;
-	height: 100vh;
+	min-height: 100vh;
 }
-
-html::-webkit-scrollbar {
-	display: none;
-}
-
-.app-body {
-	display: flex;
-	flex-direction: column;
-	gap: 4rem;
-	overflow:scroll;
-	height:20%;
-
-	@media (max-width: 767px) {
-		width: 90vw;
-	}
- }

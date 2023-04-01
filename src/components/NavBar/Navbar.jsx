@@ -48,7 +48,9 @@ const Navbar = () => {
 	return (
 		<header>
 			<nav className='navbar'>
-				<Link to={paths.home} className='logo'>Felipe Mantovani</Link>
+				<Link to={paths.home} className='logo'>
+					Felipe Mantovani
+				</Link>
 				<section className='navbar-links'>
 					<NavLink to={paths.home}>Home</NavLink>
 					<NavLink to={paths.projects}>Projects</NavLink>

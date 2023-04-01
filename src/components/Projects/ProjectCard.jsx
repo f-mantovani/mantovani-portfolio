@@ -2,8 +2,6 @@ import React from 'react'
 import './ProjectCard.scss'
 import { NavLink } from 'react-router-dom'
 
-const checkActive = ({ isActive }) => (isActive ? 'active' : null)
-
 const titleCapitalized = title => {
 	return title
 		?.split(' ')
@@ -16,10 +14,10 @@ const titleCapitalized = title => {
 
 const sliceTech = techArray => techArray.slice(0, 4)
 
-const ProjectCard = ({ imageUrl, techStack, title, _id }) => {
+const ProjectCard = ({ imageUrl, techStack, title, _id, className }) => {
 	return (
-		<NavLink to={`/projects/${_id}`} className={checkActive}>
-			<div className='project-card'>
+		<NavLink to={`/projects/${_id}`}>
+			<div className={`project-card ${className}`}>
 				<img src={imageUrl} alt={titleCapitalized(title)} />
 				<div className='project-card-info'>
 					<h3> {titleCapitalized(title)}</h3>

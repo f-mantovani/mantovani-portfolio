@@ -1,11 +1,9 @@
 .project-single {
-	align-self: flex-start;
 	color: var(--bg-clr);
 	display: flex;
 	flex-direction: column;
-	// padding: 2rem;
-  margin-top: 4rem;
 	gap: 2rem;
+	padding: 2rem 0;
 
 	.hero {
 		display: flex;
@@ -13,6 +11,7 @@
 		justify-content: center;
 		gap: 1rem;
 		max-width: 410px;
+		// margin-top: 20rem;
 
 		img {
 			object-fit: cover;
@@ -26,7 +25,7 @@
 
 	.frontend,
 	.backend,
-	.live {
+	.live, .tech-stack {
 		display: flex;
 		flex-direction: column;
 		gap: 0.3rem;
@@ -49,6 +48,10 @@
 			display: flex;
 			align-items: center;
 		}
+	}
+
+	ul {
+		list-style: none;
 	}
 }
 

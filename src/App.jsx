@@ -18,11 +18,12 @@ import Footer from './components/Footer/Footer'
 const highlightProjects = projectsArray => projectsArray.filter(project => project.isHighlight)
 
 function App() {
-	const { data, isLoading, error } = useQuery({
+	const { data , isLoading, error} = useQuery({
 		queryKey: ['projects'],
 		queryFn: Project.getProjects,
 	})
 
+	if (isLoading) return <p> Loading... </p>
 	const highlight = highlightProjects(data)
 
 	return (

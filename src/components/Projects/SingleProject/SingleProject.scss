@@ -1,9 +1,15 @@
 .project-single {
+  color: var(--bg-clr);
+  height: 50vh;
 	overflow: scroll;
 
-  @media (max-width: 768px) {
-    height: auto;
-  }
+	* {
+		outline: 1px solid black;
+	}
+
+	p {
+		width: 60ch;
+	}
 }
 
 .project-single::-webkit-scrollbar {

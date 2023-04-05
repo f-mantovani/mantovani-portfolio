@@ -20,7 +20,7 @@ const EditProject = ({ projects }) => {
 		isHighlight: false,
 	}
 
-	const project = projects ? projects.find(p => p._id === projectId) : { ...projectDummy }
+	const project = projects ? projects?.find(p => p._id === projectId) : { ...projectDummy }
 
 	const queryClient = useQueryClient()
 

@@ -22,6 +22,9 @@ const randomOrder = array => {
 }
 
 const title = path => {
+	if (path.includes('projects')) {
+		return "Projects"
+	}
 	switch (path) {
 		case paths.home:
 			return (

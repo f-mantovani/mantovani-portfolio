@@ -4,7 +4,7 @@ import './SingleProject.scss'
 
 const SingleProject = ({ projects }) => {
   const { id } = useParams()
-  const project = projects.find(project => project._id === id)
+  const project = projects?.find(project => project._id === id)
 
   return (
     <div className='project-single'>

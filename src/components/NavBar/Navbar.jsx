@@ -56,7 +56,7 @@ const Navbar = () => {
 				</Link>
 				<section className='navbar-links'>
 					<NavLink to={paths.home}>Home</NavLink>
-					<NavLink to={paths.projects}>Projects</NavLink>
+					<NavLink to={'/projects/63f793c5bd1f1037b83ceb04'}>Projects</NavLink>
 					<NavLink to={paths.about}>About Me</NavLink>
 					<NavLink to={paths.contact}>Contact</NavLink>
 					<NavLink to={'/admin '}>Admin</NavLink>

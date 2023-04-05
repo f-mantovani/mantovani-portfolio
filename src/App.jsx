@@ -15,7 +15,7 @@ import EditProject from './components/Projects/EditProject/EditProject'
 import paths from './utils/path.js'
 import Footer from './components/Footer/Footer'
 
-const highlightProjects = projectsArray => projectsArray?.filter(project => project.isHighlight)
+const highlightProjects = projectsArray => projectsArray.filter(project => project.isHighlight)
 
 function App() {
 	const { data, isLoading, error } = useQuery({
@@ -28,27 +28,27 @@ function App() {
 	return (
 		<div className='App'>
 			<Navbar />
-			<Routes>
-				<Route path={paths.home} element={<Home projects={highlight} />} />
+				<Routes>
+					<Route path={paths.home} element={<Home projects={highlight} />} />
 
-				<Route path={paths.projects} element={<Projects projects={data} />}>
-					<Route path={paths.projectId} element={<SingleProject projects={data} />} />
-				</Route>
+					<Route path={paths.projects} element={<Projects projects={data} />}>
+						<Route path={paths.projectId} element={<SingleProject projects={data} />} />
+					</Route>
 
-				<Route path={paths.about} element={<About />} />
+					<Route path={paths.about} element={<About />} />
 
-				<Route path={paths.contact} element={<Contact />} />
+					<Route path={paths.contact} element={<Contact />} />
 
-				<Route path={paths.admin} element={<AdminLogin />} />
+					<Route path={paths.admin} element={<AdminLogin />} />
 
-				<Route path='/private' element={<IsPrivate />}>
-					<Route path='dashboard' element={<Dashboard projects={data} />} />
-					<Route path=':projectId' element={<EditProject projects={data} />} />
-					<Route path='add' element={<EditProject />} />
-				</Route>
+					<Route path='/private' element={<IsPrivate />}>
+						<Route path='dashboard' element={<Dashboard projects={data} />} />
+						<Route path=':projectId' element={<EditProject projects={data} />} />
+						<Route path='add' element={<EditProject />} />
+					</Route>
 
-				<Route path='*' element={<Home projects={highlight} />} />
-			</Routes>
+					<Route path='*' element={<Home projects={highlight} />} />
+				</Routes>
 			<Footer />
 		</div>
 	)

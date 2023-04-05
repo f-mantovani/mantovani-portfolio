@@ -1,6 +1,6 @@
 import React from 'react'
 import './ProjectCard.scss'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useLocation } from 'react-router-dom'
 
 const titleCapitalized = title => {
 	return title
@@ -15,6 +15,7 @@ const titleCapitalized = title => {
 const sliceTech = techArray => techArray.slice(0, 4)
 
 const ProjectCard = ({ imageUrl, techStack, title, _id, className }) => {
+
 	return (
 		<NavLink to={`/projects/${_id}`}>
 			<div className={`project-card ${className}`}>

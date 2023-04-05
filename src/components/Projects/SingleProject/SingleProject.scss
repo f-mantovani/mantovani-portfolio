@@ -1,14 +1,54 @@
 .project-single {
-  color: var(--bg-clr);
-  height: 50vh;
-	overflow: scroll;
+	align-self: flex-start;
+	color: var(--bg-clr);
+	display: flex;
+	flex-direction: column;
+	// padding: 2rem;
+  margin-top: 4rem;
+	gap: 2rem;
 
-	* {
-		outline: 1px solid black;
+	.hero {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		gap: 1rem;
+		max-width: 410px;
+
+		img {
+			object-fit: cover;
+			border-radius: 0.5rem;
+		}
+
+		p {
+			max-width: 60ch;
+		}
 	}
 
-	p {
-		width: 60ch;
+	.frontend,
+	.backend,
+	.live {
+		display: flex;
+		flex-direction: column;
+		gap: 0.3rem;
+
+		h4 {
+			color: var(--bg-clr);
+			font-family: 'Lato';
+			font-style: normal;
+			font-weight: 900;
+			font-size: var(--fs-medium);
+			text-transform: uppercase;
+		}
+
+		img {
+			width: 1.5rem;
+			height: 1.5rem;
+		}
+
+		.icon-link {
+			display: flex;
+			align-items: center;
+		}
 	}
 }
 

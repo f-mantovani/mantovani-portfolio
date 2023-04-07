@@ -22,20 +22,24 @@ const SingleProject = ({ projects }) => {
 					<a href={project.frontendLink}> {project.frontendLink} </a>
 				</div>
 			</div>
-			<div className='backend'>
-				<h4> BACK-END REPO </h4>
-				<div className='icon-link'>
-					<img src={linkIcon} alt='link-icon' />
-					<a href={project.backendLink}> {project.backendLink} </a>
+			{project.backendLink && (
+				<div className='backend'>
+					<h4> BACK-END REPO </h4>
+					<div className='icon-link'>
+						<img src={linkIcon} alt='link-icon' />
+						<a href={project.backendLink}> {project.backendLink} </a>
+					</div>
 				</div>
-			</div>
-			<div className='live'>
-				<h4> LIVE APP </h4>
-				<div className='icon-link'>
-					<img src={linkIcon} alt='link-icon' />
-					<a href={project.liveApp}> {project.liveApp} </a>
+			)}
+			{project.liveApp && (
+				<div className='live'>
+					<h4> LIVE APP </h4>
+					<div className='icon-link'>
+						<img src={linkIcon} alt='link-icon' />
+						<a href={project.liveApp}> {project.liveApp} </a>
+					</div>
 				</div>
-			</div>
+			)}
 			<div className='tech-stack'>
 				<h4>TECH STACK:</h4>
 				<ul>

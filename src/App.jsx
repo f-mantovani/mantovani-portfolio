@@ -1,19 +1,20 @@
 import { useQuery } from '@tanstack/react-query'
-import './App.scss'
+import { Route, Routes } from 'react-router-dom'
+import Navbar from './components/NavBar/Navbar'
 import Project from './services/projectsConnect'
 import Projects from './components/Projects/AllProjects/Projects'
 import SingleProject from './components/Projects/SingleProject/SingleProject'
 import Home from './components/Home/Home'
-import Contact from './components/Contact/Contact'
-import Navbar from './components/NavBar/Navbar'
-import { Route, Routes } from 'react-router-dom'
 import About from './components/About/About'
+import ContactPage from './components/ContactPage/ContactPage'
 import AdminLogin from './components/Admin/AdminLogin'
 import IsPrivate from './components/IsPrivate'
 import Dashboard from './components/Dashboard/Dashboard'
 import EditProject from './components/Projects/EditProject/EditProject'
 import paths from './utils/path.js'
 import Footer from './components/Footer/Footer'
+
+import './App.scss'
 
 const highlightProjects = projectsArray => projectsArray.filter(project => project.isHighlight)
 
@@ -38,7 +39,7 @@ function App() {
 
 					<Route path={paths.about} element={<About />} />
 
-					<Route path={paths.contact} element={<Contact />} />
+					<Route path={paths.contact} element={<ContactPage />} />
 
 					<Route path={paths.admin} element={<AdminLogin />} />
 

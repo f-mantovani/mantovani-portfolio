@@ -39,7 +39,7 @@ const title = path => {
 		case paths.projects:
 			return 'Projects'
 		case paths.about:
-			return 'About'
+			return 'About Me'
 		case paths.contact:
 			return 'Contact'
 	}

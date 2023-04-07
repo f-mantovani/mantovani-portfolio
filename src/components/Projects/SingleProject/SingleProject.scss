@@ -25,7 +25,8 @@
 
 	.frontend,
 	.backend,
-	.live, .tech-stack {
+	.live,
+	.tech-stack {
 		display: flex;
 		flex-direction: column;
 		gap: 0.3rem;
@@ -52,6 +53,9 @@
 
 	ul {
 		list-style: none;
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
 	}
 }
 

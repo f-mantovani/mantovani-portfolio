@@ -1,0 +1,9 @@
+.click-links {
+	display: flex;
+	align-items: center;
+
+	p {
+		color: var(--bg-clr);
+		text-decoration: underline;
+	}
+}

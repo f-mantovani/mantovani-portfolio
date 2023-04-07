@@ -15,6 +15,7 @@ import paths from './utils/path.js'
 import Footer from './components/Footer/Footer'
 
 import './App.scss'
+import HomeMock from './components/HomeMock/HomeMock'
 
 const highlightProjects = projectsArray => projectsArray.filter(project => project.isHighlight)
 
@@ -24,9 +25,12 @@ function App() {
 		queryFn: Project.getProjects,
 	})
 
-	if (isLoading) return <p> Loading... </p>
-	const highlight = highlightProjects(data)
+	if (isLoading) return <HomeMock  status='Loading...' />
 
+	if (error) return <HomeMock  status='Something went wrong fetching the projects' />
+	
+	const highlight = highlightProjects(data)
+	
 	return (
 		<div className='App'>
 			<Navbar />

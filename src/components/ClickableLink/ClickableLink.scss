@@ -5,5 +5,10 @@
 	p {
 		color: var(--bg-clr);
 		text-decoration: underline;
+		font-size: var(--fs-medium);
+	}
+
+	p:hover {
+		text-decoration-thickness: 3px;
 	}
 }

@@ -19,7 +19,7 @@ import './App.scss'
 const highlightProjects = projectsArray => projectsArray.filter(project => project.isHighlight)
 
 function App() {
-	const { data , isLoading, error} = useQuery({
+	const { data, isLoading, error } = useQuery({
 		queryKey: ['projects'],
 		queryFn: Project.getProjects,
 	})
@@ -30,6 +30,7 @@ function App() {
 	return (
 		<div className='App'>
 			<Navbar />
+			<div style={{ width: '80%' }}>
 				<Routes>
 					<Route path={paths.home} element={<Home projects={highlight} />} />
 
@@ -51,6 +52,7 @@ function App() {
 
 					<Route path='*' element={<Home projects={highlight} />} />
 				</Routes>
+			</div>
 			<Footer />
 		</div>
 	)

@@ -5,6 +5,7 @@ import codeWars from '../../assets/codewars.png'
 import gitHub from '../../assets/github.png'
 import linkedIn from '../../assets/linkedin.png'
 import mail from '../../assets/mail.png'
+import profilePic from '../../assets/profile-pic.png'
 import ClickableLink from '../ClickableLink/ClickableLink'
 
 const About = () => {
@@ -12,17 +13,15 @@ const About = () => {
 		<>
 			<div className='about'>
 				<section className='about-intro'>
-					<div className='img-holder'>
-						<img src='...' alt='profile-image' />
-					</div>
+					<img src={profilePic} alt='profile-image' />
 					<div className='about-intro-text'>
 						<p>
 							I'm a full-stack MERN developer experienced in learning and collaborating in dynamic
 							and rapidly changing environments.
 						</p>
 						<p>
-							I'm currently looking for a company where I can apply my skills and accelerate my
-							learning path!
+							Working as a freelancer in software development for the past year, I'm currently
+							looking for a company where I can apply my skills and accelerate my learning path!
 						</p>
 					</div>
 				</section>
@@ -32,14 +31,14 @@ const About = () => {
 						<div className='programming-skills'>
 							<h3>Check my programming skills</h3>
 							<ClickableLink link='https://github.com/f-mantovani' img={gitHub} alt='github-logo'>
-								https://github.com/f-mantovani
+								github.com/f-mantovani
 							</ClickableLink>
 							<ClickableLink
 								link='https://www.codewars.com/users/F-Mantovani'
 								img={codeWars}
 								alt='codewars-logo'
 							>
-								https://www.codewars.com/users/F-Mantovani
+								codewars.com/users/F-Mantovani
 							</ClickableLink>
 						</div>
 						<div className='contact-links'>
@@ -47,7 +46,11 @@ const About = () => {
 							<ClickableLink link='mailto:felipe.mantovani@outlook.com' img={mail} alt='mail-icon'>
 								felipe.mantovani@outlook.com
 							</ClickableLink>
-							<ClickableLink link='https://linkedin.com/in/f-mantovani/' img={linkedIn} alt='linkedin-logo'>
+							<ClickableLink
+								link='https://linkedin.com/in/f-mantovani/'
+								img={linkedIn}
+								alt='linkedin-logo'
+							>
 								linkedin.com/in/f-mantovani/
 							</ClickableLink>
 						</div>

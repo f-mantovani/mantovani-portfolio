@@ -2,6 +2,7 @@
 	display: flex;
 	justify-content: space-around;
 	width: 100%;
+	margin-top: 4rem;
 	margin-bottom: 5.125rem;
 
 	.contact-links {
@@ -12,7 +13,7 @@
 		img {
 			width: 1.25rem;
 			height: 1.25rem;
-			margin: auto 1.125rem;
+			margin-right: 1.125rem;
 		}
 	}
 }

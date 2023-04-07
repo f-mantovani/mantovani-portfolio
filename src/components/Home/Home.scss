@@ -14,10 +14,7 @@
 
 	.home-projects {
 		display: flex;
-		flex-wrap: wrap;
 		width: 100%;
-		justify-content: space-around;
-		gap: 1rem;
-		padding: 0 8rem;
+		justify-content: space-between;
 	}
 }

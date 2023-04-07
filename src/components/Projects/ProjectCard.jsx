@@ -12,7 +12,7 @@ const titleCapitalized = title => {
 		.join(' ')
 }
 
-const sliceTech = techArray => techArray.slice(0, 4)
+const sliceTech = techArray => techArray.slice(0, 3)
 
 const ProjectCard = ({ imageUrl, techStack, title, _id, className }) => {
 

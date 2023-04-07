@@ -5,6 +5,7 @@
 	min-height: 20rem;
 	display: flex;
 	flex-direction: column;
+	transition: outline 250ms ease-out;
 
 	h3 {
 		color: var(--bg-clr);
@@ -52,6 +53,7 @@
 	.project-card-tech ul {
 		display: flex;
 		gap: 1rem;
+		margin-top: 0.5rem;
 	}
 }
 
@@ -75,9 +77,9 @@ a {
 	}
 
 	img {
-		width: 360px;
+		width: 200px;
 		min-height: 200px;
-		object-fit: fill;
+		object-fit: cover;
 		border-top-right-radius: 0;
 		border-top-left-radius: 0.5rem;
 		border-bottom-left-radius: 0.5rem;
@@ -88,8 +90,3 @@ a {
 		width: 50%;
 	}
 }
-
-
-
-
-

@@ -59,8 +59,8 @@ const Navbar = () => {
 					<NavLink to={'/projects/63f793c5bd1f1037b83ceb04'}>Projects</NavLink>
 					<NavLink to={paths.about}>About Me</NavLink>
 					<NavLink to={paths.contact}>Contact</NavLink>
-					<NavLink to={'/admin '}>Admin</NavLink>
-					<NavLink to={'/private/dashboard'}>Dash</NavLink>
+					{/* <NavLink to={'/admin '}>Admin</NavLink>
+					<NavLink to={'/private/dashboard'}>Dash</NavLink> */}
 				</section>
 			</nav>
 			<h1 className='main-title'> {title(pathname)}</h1>

@@ -18,13 +18,15 @@ const SingleProject = ({ projects }) => {
 			</div>
 
 			<div className='additional-info'>
-				<div className='frontend'>
-					<h4> FRONT-END REPO </h4>
-					<div className='icon-link'>
-						<img src={linkIcon} alt='link-icon' />
-						<a href={project.frontendLink}> {project.frontendLink} </a>
+				{project.frontendLink && (
+					<div className='frontend'>
+						<h4> FRONT-END REPO </h4>
+						<div className='icon-link'>
+							<img src={linkIcon} alt='link-icon' />
+							<a href={project.frontendLink}> {project.frontendLink} </a>
+						</div>
 					</div>
-				</div>
+				)}
 
 				{project.backendLink && (
 					<div className='backend'>

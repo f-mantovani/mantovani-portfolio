@@ -15,7 +15,9 @@ const EditProject = ({ projects }) => {
 		title: '',
 		frontendLink: '',
 		backendLink: '',
+		liveAppLink: '',
 		imageUrl: '',
+		cardImage: '',
 		description: '',
 		isHighlight: false,
 	}
@@ -40,18 +42,21 @@ const EditProject = ({ projects }) => {
 					project,
 				}}
 				onSubmit={async ({ project }, { setSubmitting }) => {
-					const { image } = project
+					const { image, card } = project
 					delete project.image
+					delete project.card
 
 					try {
 						setSubmitting(true)
 						const imageUrl = image ? await uploadConnect.sendImage(image) : undefined
 
-						const projectInfo = { ...project, ...imageUrl }
+						const cardImage = card ? await uploadConnect.sendImage(card) : undefined
 
+						const projectInfo = { ...project, ...imageUrl, cardImage: cardImage.imageUrl }
+						console.log(cardImage)
 						add ? mutate(projectInfo) : mutate({ id: projectId, data: projectInfo })
-						
-						navigate('/private/dashboard')
+
+						// navigate('/private/dashboard')
 					} catch (error) {
 						console.log(error)
 					} finally {
@@ -83,7 +88,15 @@ const EditProject = ({ projects }) => {
 								type='text'
 								placeholder='backendLink'
 								id='backendLink'
-								required
+							/>
+						</div>
+						<div>
+							<label htmlFor='liveAppLink'>liveAppLink</label>
+							<Field
+								name='project.liveAppLink'
+								type='text'
+								placeholder='liveAppLink'
+								id='liveAppLink'
 							/>
 						</div>
 						<div>
@@ -94,7 +107,6 @@ const EditProject = ({ projects }) => {
 								type='text'
 								placeholder='description'
 								id='description'
-								required
 							/>
 						</div>
 						<div>
@@ -115,6 +127,18 @@ const EditProject = ({ projects }) => {
 								id='imageUrl'
 								onChange={e => {
 									setFieldValue('project.image', e.currentTarget.files[0])
+								}}
+							/>
+						</div>
+						<div>
+							<img src={project.cardImage} alt={project.title} width={30} />
+							<label htmlFor='cardImage'>cardImage</label>
+							<input
+								name='project.card'
+								type='file'
+								id='cardImage'
+								onChange={e => {
+									setFieldValue('project.card', e.currentTarget.files[0])
 								}}
 							/>
 						</div>

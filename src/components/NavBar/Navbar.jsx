@@ -13,7 +13,7 @@ const strings = [
 	'Backend Developer',
 ]
 
-const randomOrder = array => {
+const randomOrder = (array) => {
 	for (let i = array.length - 1; i > 0; i -= 1) {
 		const j = Math.floor(Math.random() * (i + 1))
 		;[array[i], array[j]] = [array[j], array[i]]
@@ -21,9 +21,9 @@ const randomOrder = array => {
 	return array
 }
 
-const title = path => {
+const title = (path) => {
 	if (path.includes('projects')) {
-		return "Projects"
+		return 'Projects'
 	}
 	switch (path) {
 		case paths.home:
@@ -45,7 +45,7 @@ const title = path => {
 	}
 }
 
-const Navbar = () => {
+const Navbar = ({ highlightId }) => {
 	const { pathname } = useLocation()
 
 	return (
@@ -56,7 +56,7 @@ const Navbar = () => {
 				</Link>
 				<section className='navbar-links'>
 					<NavLink to={paths.home}>Home</NavLink>
-					<NavLink to={'/projects/63f793c5bd1f1037b83ceb04'}>Projects</NavLink>
+					<NavLink to={`${paths.projects}`}>Projects</NavLink>
 					<NavLink to={paths.about}>About Me</NavLink>
 					<NavLink to={paths.contact}>Contact</NavLink>
 					{/* <NavLink to={'/admin '}>Admin</NavLink>

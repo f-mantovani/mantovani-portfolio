@@ -6,17 +6,14 @@
 	margin-top: 2rem;
 
 	.projects-all {
-		align-self: flex-start;
 		display: flex;
 		flex-direction: column;
+		align-items: center;
 		gap: 3rem;
 		padding: 2rem;
 		height: 70vh;
 		overflow: scroll;
-
-		a:not(.active) {
-			opacity: 0.4;
-		}
+		width: 100%;
 
 		a.active {
 			outline: 5px solid var(--bg-clr);

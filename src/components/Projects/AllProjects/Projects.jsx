@@ -1,18 +1,16 @@
-import './Projects.scss'
-import ProjectCard from '../ProjectCard'
-import { Outlet } from 'react-router-dom'
+import './Projects.scss';
+import ProjectCard from '../ProjectCard';
 
 const Projects = ({ projects }) => {
 	return (
 		<div className='projects'>
-			<div className='projects-all'>
+			<div className='projects-all' >
 				{projects?.map((project) => (
 					<ProjectCard key={project._id} {...project} className='project-page' />
 				))}
 			</div>
-			<Outlet />
 		</div>
-	)
-}
+	);
+};
 
-export default Projects
+export default Projects;

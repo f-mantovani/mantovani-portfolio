@@ -1,7 +1,7 @@
  const paths = {
   home: '/',
   projects: '/projects',
-  projectId: ':id',
+  projectId: '/projects/:id',
   about: '/about',
   contact: '/contact',
   admin: '/admin',

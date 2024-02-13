@@ -2,6 +2,7 @@
 	color: var(--bg-clr);
 	display: flex;
 	flex-direction: column;
+	align-items: center;
 	gap: 2rem;
 	padding: 2rem 0;
 
@@ -9,18 +10,24 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
+		align-items: center;
 		gap: 1rem;
-		max-width: 410px;
-		// margin-top: 20rem;
 
 		img {
 			object-fit: cover;
 			border-radius: 0.5rem;
+			max-width: 410px;
 		}
 
 		p {
 			max-width: 60ch;
 		}
+	}
+
+	.additional-info {
+		display: flex;
+		flex-direction: column;
+		gap: .5rem;
 	}
 
 	.frontend,

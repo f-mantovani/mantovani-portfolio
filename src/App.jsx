@@ -13,6 +13,7 @@ import Dashboard from './components/Dashboard/Dashboard';
 import EditProject from './components/Projects/EditProject/EditProject';
 import paths from './utils/path.js';
 import Footer from './components/Footer/Footer';
+import projectsJson from '../projects.json'
 
 import './App.scss';
 import HomeMock from './components/HomeMock/HomeMock';
@@ -23,6 +24,7 @@ function App() {
 	const { data, isLoading, error } = useQuery({
 		queryKey: ['projects'],
 		queryFn: Project.getProjects,
+		initialData: projectsJson
 	});
 
 	if (isLoading) return <HomeMock status='Loading...' />;
@@ -30,6 +32,7 @@ function App() {
 	if (error) return <HomeMock status='Something went wrong fetching the projects' />;
 
 	const highlight = highlightProjects(data);
+
 
 	return (
 		<div className='App'>

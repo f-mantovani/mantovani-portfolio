@@ -1,3 +1,5 @@
+@import '../../../breakpoints';
+
 .projects {
 	width: 100%;
 	display: flex;
@@ -24,5 +26,13 @@
 
 	.projects-all::-webkit-scrollbar {
 		display: none;
+	}
+}
+
+@media (max-width: $mobile) {
+	.projects{
+		.projects-all{
+			gap: 2rem;
+		}
 	}
 }

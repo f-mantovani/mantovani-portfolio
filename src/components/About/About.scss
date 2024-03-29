@@ -1,3 +1,5 @@
+@import '../../breakpoints';
+
 .about {
 	display: flex;
 	flex-direction: column;
@@ -90,4 +92,19 @@
 
 .about::-webkit-scrollbar {
 	display: none;
+}
+
+@media (max-width: $mobile) {
+	.about-intro {
+		flex-direction: column;
+	}
+
+	.skills{
+		flex-direction: column;
+	}
+
+	.about-contact {
+		max-width: 100%;
+		margin: -40rem auto;
+	}
 }

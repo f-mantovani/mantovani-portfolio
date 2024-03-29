@@ -1,4 +1,4 @@
-[
+export default [
 	{
 		"_id": "65cba5f32827c7ae32a5e11f",
 		"title": "keep me alive",

@@ -1,59 +1,60 @@
+@import '../../breakpoints';
+
 header {
-	width: 100%;
-	background-color: var(--bg-clr);
-	clip-path: ellipse(65% 100% at 50% 0%);
-	.navbar {
-		display: flex;
-		justify-content: space-between;
-		padding: 1rem 0;
-		width: 80%;
-		margin: auto;
-		gap: 1rem;
+    width: 100%;
+    background-color: var(--bg-clr);
+    clip-path: ellipse(65% 100% at 50% 0%);
 
-		a {
-			color: var(--acc-clr);
-		}
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem 0;
+        width: 80%;
+        margin: auto;
+        gap: 1rem;
 
-		.logo {
-			font-family: 'Play';
-			font-style: normal;
-			font-weight: 700;
-			font-size: var(--fs-large);
-		}
+        a {
+            color: var(--acc-clr);
+        }
 
-		.navbar-links {
-			display: flex;
-			gap: 0.3rem;
-		}
+        .logo {
+            font-family: 'Play';
+            font-style: normal;
+            font-weight: 700;
+            font-size: var(--fs-large);
+        }
 
-		.navbar-links a {
-			padding: 0.25rem 1.5rem;
-			font-family: inherit;
-			font-size: 1.25rem;
-		}
+    }
 
-		.active {
-			color: var(--acc-clr);
-			outline: 2px solid var(--acc-clr);
-			border-radius: 28px;
-		}
-	}
+    .main-title {
+        text-align: center;
+        color: var(--acc-clr);
+        font-family: 'Play';
+        font-style: normal;
+        font-weight: 700;
+        font-size: var(--fs-xlarge);
+        line-height: 65px;
+        background-color: var(--bg-clr);
+        width: 100%;
+        padding: 4rem;
+        overflow: hidden;
 
-	.main-title {
-		text-align: center;
-		color: var(--acc-clr);
-		font-family: 'Play';
-		font-style: normal;
-		font-weight: 700;
-		font-size: var(--fs-xlarge);
-		line-height: 65px;
-		background-color: var(--bg-clr);
-		width: 100%;
-		padding: 4rem;
-		overflow: hidden;
+        span {
+            font-family: 'Play';
+        }
+    }
+}
 
-		span {
-			font-family: 'Play';
-		}
-	}
+@media (max-width: $mobile) {
+    header {
+        clip-path: ellipse(100% 80% at 50% 10%);
+
+        .main-title {
+            min-height: 200px;
+        }
+
+        .home-title.home-title {
+            min-height: 320px;
+        }
+    }
 }

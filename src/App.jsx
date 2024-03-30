@@ -26,12 +26,12 @@ import './App.scss';
 const highlightProjects = (projectsArray) => projectsArray.filter((project) => project.isHighlight);
 
 function App() {
-	// console.log(projectsInitial)
     const [isOpen, setIsOpen] = useState(false);
 
     const { data, isLoading, error } = useQuery({
         queryKey: ['projects'],
         queryFn: Project.getProjects,
+		initialData: projectsInitial,
     });
 
     if (isLoading) return <HomeMock status='Loading...' />;

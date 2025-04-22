@@ -1,15 +1,21 @@
-import { NavLink } from 'react-router-dom'
+import { NavLink } from "react-router-dom";
 
 const Dashboard = ({ projects }) => {
-	return (
-		<>
-			<NavLink to={`/private/add`}> Add a project </NavLink>
+  return (
+    <>
+      <NavLink to={`/private/add`}> Add a project </NavLink>
+      <div
+        style={{ display: "flex", flexDirection: "column", marginTop: "2rem" }}
+      >
+        {projects?.map((p) => (
+          <NavLink to={`/private/${p._id}`} key={p._id}>
+            {" "}
+            {p.title}{" "}
+          </NavLink>
+        ))}
+      </div>
+    </>
+  );
+};
 
-			{projects?.map(p => (
-				<NavLink to={`/private/${p._id}`} key={p._id}> {p.title} </NavLink>
-			))}
-		</>
-	)
-}
-
-export default Dashboard
+export default Dashboard;

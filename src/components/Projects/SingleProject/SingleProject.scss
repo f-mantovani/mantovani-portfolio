@@ -1,71 +1,71 @@
 .project-single {
-	color: var(--bg-clr);
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	gap: 2rem;
-	padding: 2rem 0;
+  color: var(--bg-clr);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem 0;
 
-	.hero {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		gap: 1rem;
+  .hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
 
-		img {
-			object-fit: cover;
-			border-radius: 0.5rem;
-			max-width: 410px;
-		}
+    img {
+      object-fit: cover;
+      border-radius: 0.5rem;
+      max-width: 410px;
+    }
 
-		p {
-			max-width: 60ch;
-		}
-	}
+    p {
+      max-width: 60ch;
+    }
+  }
 
-	.additional-info {
-		display: flex;
-		flex-direction: column;
-		gap: .5rem;
-	}
+  .additional-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
 
-	.frontend,
-	.backend,
-	.live,
-	.tech-stack {
-		display: flex;
-		flex-direction: column;
-		gap: 0.3rem;
+  .frontend,
+  .backend,
+  .live,
+  .tech-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
 
-		h4 {
-			color: var(--bg-clr);
-			font-family: 'Lato';
-			font-style: normal;
-			font-weight: 900;
-			font-size: var(--fs-medium);
-			text-transform: uppercase;
-		}
+    h4 {
+      color: var(--bg-clr);
+      font-family: "Lato";
+      font-style: normal;
+      font-weight: 900;
+      font-size: var(--fs-medium);
+      text-transform: uppercase;
+    }
 
-		img {
-			width: 1.5rem;
-			height: 1.5rem;
-		}
+    img {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
 
-		.icon-link {
-			display: flex;
-			align-items: center;
-		}
-	}
+    .icon-link {
+      display: flex;
+      align-items: center;
+    }
+  }
 
-	ul {
-		list-style: none;
-		display: flex;
-		flex-direction: column;
-		gap: 0.5rem;
-	}
+  ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
 }
 
 .project-single::-webkit-scrollbar {
-	display: none;
+  display: none;
 }

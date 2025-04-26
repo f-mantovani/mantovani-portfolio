@@ -1,120 +1,120 @@
-@import '../../breakpoints';
+@import "../../breakpoints";
 
 .project-card {
-    outline: 2px solid var(--bg-clr);
-    border-radius: 0.5rem;
-    min-height: 20rem;
+  outline: 2px solid var(--bg-clr);
+  border-radius: 0.5rem;
+  min-height: 20rem;
+  display: flex;
+  flex-direction: column;
+  transition: outline 150ms ease-out;
+
+  h3 {
+    color: var(--bg-clr);
+    font-size: var(--fs-medium);
+    font-weight: var(--fw-bold);
+    margin: 1.5rem 0;
+    text-transform: uppercase;
+    align-self: flex-start;
+  }
+
+  p {
+    color: var(--bg-clr);
+    font-weight: var(--fw-bold);
+    text-transform: uppercase;
+    font-size: var(--fs-small);
+    align-self: flex-start;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  li {
+    color: var(--bg-clr);
+    font-size: var(--fs-small);
+  }
+
+  img {
+    margin: 0 auto;
+    width: 300px;
+    height: 180px;
+    object-fit: cover;
+    border-top-right-radius: 0.5rem;
+    border-top-left-radius: 0.5rem;
+  }
+
+  .project-card-info {
     display: flex;
     flex-direction: column;
-    transition: outline 250ms ease-out;
+    justify-content: center;
+    width: 80%;
+    margin: 0 auto;
+  }
 
-    h3 {
-        color: var(--bg-clr);
-        font-size: var(--fs-medium);
-        font-weight: var(--fw-bold);
-        margin: 1.5rem 0;
-        text-transform: uppercase;
-        align-self: flex-start;
-    }
-
-    p {
-        color: var(--bg-clr);
-        font-weight: var(--fw-bold);
-        text-transform: uppercase;
-        font-size: var(--fs-small);
-        align-self: flex-start;
-    }
-
-    ul {
-        list-style: none;
-    }
-
-    li {
-        color: var(--bg-clr);
-        font-size: var(--fs-small);
-    }
-
-    img {
-        margin: 0 auto;
-        width: 300px;
-        height: 180px;
-        object-fit: cover;
-        border-top-right-radius: 0.5rem;
-        border-top-left-radius: 0.5rem;
-    }
-
-    .project-card-info {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        width: 80%;
-        margin: 0 auto;
-    }
-
-    .project-card-tech ul {
-        display: flex;
-        gap: 1rem;
-        margin-top: 0.5rem;
-    }
+  .project-card-tech ul {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+  }
 }
 
 .project-card:hover {
-    outline: 5px solid var(--bg-clr);
+  outline: 5px solid var(--bg-clr);
 }
 
 .project-page {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
+  min-height: 200px;
+  max-width: 100%;
+
+  h3 {
+    width: 215px;
+    margin-top: 0;
+  }
+
+  img {
+    width: 200px;
     min-height: 200px;
+    object-fit: cover;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+  }
+
+  .project-card-info {
+    margin-left: 1rem;
+    width: 50%;
+  }
+
+  .project-link {
+    display: flex;
     max-width: 100%;
-
-    h3 {
-        width: 215px;
-        margin-top: 0;
-    }
-
-    img {
-        width: 200px;
-        min-height: 200px;
-        object-fit: cover;
-        border-top-right-radius: 0;
-        border-top-left-radius: 0.5rem;
-        border-bottom-left-radius: 0.5rem;
-    }
-
-    .project-card-info {
-        margin-left: 1rem;
-        width: 50%;
-    }
-
-	.project-link {
-		display: flex;
-		max-width: 100%;
-	}
+  }
 }
 
 @media (max-width: $mobile) {
-    .project-page {
-        display: flex;
-        flex-direction: column;
-		align-items: center;
-		min-height: auto;
+  .project-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: auto;
 
-        img {
-            min-width: 100%;
-            border-top-right-radius: 0.5rem;
-            border-top-left-radius: 0.5rem;
-            border-bottom-left-radius: 0;
-        }
-
-		.project-link {
-			display: flex;
-			flex-direction: column;
-			max-width: 100%;
-		}
-
-		.project-card-info {
-			margin: 1rem;
-		}
+    img {
+      min-width: 100%;
+      border-top-right-radius: 0.5rem;
+      border-top-left-radius: 0.5rem;
+      border-bottom-left-radius: 0;
     }
+
+    .project-link {
+      display: flex;
+      flex-direction: column;
+      max-width: 100%;
+    }
+
+    .project-card-info {
+      margin: 1rem;
+    }
+  }
 }

@@ -15,20 +15,6 @@ export default [
       "https://res.cloudinary.com/dx2ymjepk/image/upload/v1744977311/projects-gallery/xsy3aqvaw594cegpdbuq.png",
   },
   {
-    _id: "65cba5f32827c7ae32a5e11f",
-    title: "keep me alive",
-    backendLink: "https://github.com/f-mantovani/KeepMeAlive-hbs-version",
-    liveAppLink: "https://keepmealive.onrender.com/",
-    description:
-      "Conceived to address the challenge faced by students utilizing the free tier of MongoDB Atlas, the Keep Me Alive project prevents data loss caused by the automatic shutdown of clusters after 60 days. Additionally, it serves as a valuable learning experience in working with templating languages, specifically enhancing proficiency with Handlebars.",
-    isHighlight: false,
-    techStack: ["Handlebars", "Node", "Express"],
-    imageUrl: "",
-    createdAt: "2024-02-13T17:25:07.114Z",
-    updatedAt: "2024-02-13T17:25:07.114Z",
-    __v: 0,
-  },
-  {
     _id: "65cba6072827c7ae32a5e122",
     title: "plato planner",
     frontendLink: "https://github.com/f-mantovani/project-3-client",
